@@ -8,12 +8,23 @@ class Ninja {
     sayName() {
         console.log(`Hello my name is, ${ this.name }!!`);
     }
-    // simple method in the parent class
     showStats(){
         console.log(`Name: ${ this.name }, Strength: ${this.strength},Speed: ${this.speed},Health: ${this.health}`);
     }
     drinkSake(){
         this.health+=10;
+    }
+}
+
+class Sensei extends Ninja {
+    constructor(name,wisdom =10) {
+        super(name,200, 10,10);
+        this.wisdom = wisdom;
+    }
+
+    speakWisdom(){
+        super.drinkSake();
+        console.log("Widsom is Mosdiw backwards");
     }
 }
 
@@ -24,3 +35,9 @@ felix.showStats();
 felix.drinkSake();
 felix.showStats();
 felix.showStats();
+
+const superSensei = new Sensei("Master Splinter");
+superSensei.speakWisdom();
+superSensei.speakWisdom();
+
+superSensei.showStats();
