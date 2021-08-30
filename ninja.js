@@ -23,3 +23,4 @@ felix.sayName();
 felix.showStats();
 felix.drinkSake();
 felix.showStats();
+felix.showStats();
